@@ -13,7 +13,7 @@ Règles de sécurité de trafic entrant :
 
 - Plages d'adresses IP/CIDR sources : 10.0.1.0/24 (Subnet-Front)
 
-- Ports de destination : 8080 pour l'API et 27017 pour MongoDB
+- Ports de destination : 8080 pour l'API et 27017 pour MongoDB ou * pour tout
 
 - Protocole : Any
 
@@ -34,6 +34,10 @@ Config :
 ![image](https://github.com/user-attachments/assets/85001564-bcfc-475d-9f7d-257a4b87756e)
 
 - Type d'authentification : Mot de passe
+
+- Nom d’utilisateur : azureadmin
+
+- Mot de passe : P@ssword12345
 
 - Ports d'entrée publics : frontend : HTTP (80), HTTPS (443), SSH (22), backend : Aucun
 
@@ -69,4 +73,10 @@ Creation Azure Cosmos DB :
 
 - Data Encryption : Service-managed key
 
+![image](https://github.com/user-attachments/assets/53bdcd61-3706-4d01-8cd2-61498a3c5e02)
+Installation vm-app3tiers-frontend :
 
+- sudo apt update
+- sudo apt install nginx -y
+- sudo systemctl start nginx
+- sudo systemctl enable nginx
