@@ -135,7 +135,7 @@ location /api/ {
 - Tester la configuration :
 ```bash
 sudo nginx -t
-sudo systemctl restart nginx
+sudo systemctl reload nginx
 ```
 
 ![image](https://github.com/user-attachments/assets/91444d11-a8d4-4532-a43e-e5afeb3d6ba5)
