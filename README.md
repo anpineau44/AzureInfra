@@ -60,7 +60,7 @@ Creation Azure Cosmos DB :
 ![image](https://github.com/user-attachments/assets/53bdcd61-3706-4d01-8cd2-61498a3c5e02)
 Installation :
 
-- Connexion : ``` ssh azureadmin@IPpublique ``` ![image](https://github.com/user-attachments/assets/cf8cd2d2-5095-4a7b-831b-e4b2ee383626) / Password : P@ssword12345
+- Connexion : ``` ssh azureadmin@IPpubliqueVMfrontend ``` ![image](https://github.com/user-attachments/assets/cf8cd2d2-5095-4a7b-831b-e4b2ee383626) / Password : P@ssword12345
 ```bash
 sudo apt update
 sudo apt install nginx -y
@@ -135,4 +135,9 @@ location /api/ {
 ![image](https://github.com/user-attachments/assets/91444d11-a8d4-4532-a43e-e5afeb3d6ba5)
 Installation :
 
+- Se Connecter dabord a vm-app3tiers-frontend puis : ``` ssh azureadmin@IPprivéVMbackend ``` ![image](https://github.com/user-attachments/assets/cf8cd2d2-5095-4a7b-831b-e4b2ee383626) / Password : P@ssword12345
 
+```bash
+sudo apt update
+sudo apt install nodejs npm -y
+```
