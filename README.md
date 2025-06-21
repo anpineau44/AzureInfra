@@ -241,4 +241,10 @@ rm -rf node_modules package-lock.json # Remove existing modules and lock file
 npm install
 ```
 
+Lancer l'API en mode détaché: 
+- Installer pm2 : ``` sudo npm install -g pm2 ```
+- Lancer l'API : ``` pm2 start app.js --name "my-game-app"```
+- Verifier le status : ```pm2 status```
+- Supprimer le processus : ```pm2 delete my-backend-api```
+
 
