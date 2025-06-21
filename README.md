@@ -61,5 +61,32 @@ Installation :
 - Connexion : ssh azureadmin@IPpublique ![image](https://github.com/user-attachments/assets/cf8cd2d2-5095-4a7b-831b-e4b2ee383626) / Password : P@ssword12345
 - sudo apt update
 - sudo apt install nginx -y
-- sudo systemctl start nginx
-- sudo systemctl enable nginx
+- sudo systemctl start nginx (Démarre le serveur web)
+- sudo systemctl enable nginx (Active NGINX au démarrage automatique du système)
+- aller dans /var/www/html et creer un fichier html : sudo nano index.html
+
+'''
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Catalogue de Jeux</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f0f0f0; }
+        h1 { color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { background-color: #fff; margin: 10px auto; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); width: 80%; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <h1>Bienvenue sur notre catalogue de jeux !</h1>
+    <p>Voici la liste des jeux (chargée depuis l'API) :</p>
+    <ul id="games-list">
+        <li>Chargement des jeux...</li>
+    </ul>
+</body>
+<script src="script.js"></script> </html>
+
+
+'''
