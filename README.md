@@ -65,7 +65,7 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
-- aller dans /var/www/html et creer un fichier html : ```sudo nano index.html```
+- Aller dans /var/www/html et creer un fichier html : ```sudo nano index.html```
 
 ```html
 <!DOCTYPE html>
@@ -91,7 +91,7 @@ sudo systemctl enable nginx
 <script src="script.js"></script> </html>
 ```
 
-Creer un fichier script.js : ```sudo nano script.js```
+Creer un fichier au meme endroit script.js : ```sudo nano script.js```
 
 ```javascript
 async function getGames() {
@@ -120,5 +120,12 @@ function displayGames(games) {
 
 // Appeler la fonction au chargement de la page
 document.addEventListener('DOMContentLoaded', getGames);
+```
+
+- Aller dans /etc/nginx/sites-available et rajouter un reverse proxy pour communiquer avec l'API
+```nginx
+location /api/ {
+                proxy_pass http://10.0.2.4:8080;
+        }
 ```
 
