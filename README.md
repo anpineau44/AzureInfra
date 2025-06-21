@@ -17,7 +17,9 @@ Règles de sécurité de trafic entrant :
 - Action : Autorisé
 
 ![image](https://github.com/user-attachments/assets/f9a20886-c269-4749-be82-9c7129705d01)
-Creation Réseau Virtuel : vnet-app3tiers, Subnet-Front : 10.0.1.0/24 associé Groupe de sécurité nsg-app3tiers-frontend, Subnet-Back : 10.0.2.0/24 associé Groupe de sécurité nsg-app3tiers-backend
+Creation Réseau Virtuel : vnet-app3tiers
+- Subnet-Front : 10.0.1.0/24 associé Groupe de sécurité nsg-app3tiers-frontend
+- Subnet-Back : 10.0.2.0/24 associé Groupe de sécurité nsg-app3tiers-backend
 
 ![image](https://github.com/user-attachments/assets/bdc20b4a-291f-4b72-a854-39ff6beecbfb)
 Creation Machine Virtuel : vm-app3tiers-frontend / vm-app3tiers-backend
