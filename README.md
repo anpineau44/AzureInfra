@@ -151,7 +151,7 @@ mkdir ~/my-simple-app
 cd ~/my-simple-app
 ```
 
-- Créez un fichier app.js : ```bash sudo nano app.js```
+- Créez un fichier app.js : ``` sudo nano app.js```
 
 ```javascript
 const express = require('express');
