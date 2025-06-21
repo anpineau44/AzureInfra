@@ -151,6 +151,17 @@ mkdir ~/my-simple-app
 cd ~/my-simple-app
 ```
 
+- Verifier version Node.js : ```bash node -v```
+Si inferieur a v14.x.x:
+- Install NVM : ```bash curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash ``` (fermer la session SSH et se reconnecter apres)
+
+- Install la derniere version LTS Node.js :
+```bash
+nvm install --lts
+nvm use --lts
+```
+
 - Créez un fichier app.js : ```bash sudo nano app.js```
 
-- 
+
+
