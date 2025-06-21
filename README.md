@@ -47,6 +47,7 @@ Config :
 ![image](https://github.com/user-attachments/assets/d8fb26a5-8a05-4105-bc6c-b997a745aa2e)
 Creation Azure Cosmos DB : 
 
+- Nom : db-app3tiers
 - Type : MongoDB
 - Architecture : Request unit (RU) database account
 - Workload Type : Learning
@@ -257,7 +258,7 @@ npm install mongodb dotenv
 - Creer un fichier d'env : ```sudo nano .env ```
 
 ```env
-MONGODB_URI=mongodb://db-app2tiers:clé@db-app2tiers.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@db-app2tiers@
+MONGODB_URI=mongodb://db-app3tiers:clé@db-app2tiers.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@db-app2tiers@
 DB_NAME=gamesdb # Laissez ce nom ou ajustez-le si nécessaire
 COLLECTION_NAME=games # Laissez ce nom ou ajustez-le si nécessaire
 ```
