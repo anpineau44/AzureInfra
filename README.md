@@ -242,12 +242,6 @@ rm -rf node_modules package-lock.json # Remove existing modules and lock file
 npm install
 ```
 
-Lancer l'API en mode détaché : 
-- Installer pm2 : ``` sudo npm install -g pm2 ```
-- Lancer l'API : ``` pm2 start app.js --name "my-backend-api"```
-- Verifier le status : ```pm2 status```
-- Supprimer le processus : ```pm2 delete my-backend-api```
-
 ![image](https://github.com/user-attachments/assets/53f4485b-43b0-49c7-9d76-0713d3b966f2)
 Configurer l'API pour se connecter a cosmosDB :
 ```bash
@@ -257,8 +251,16 @@ npm install mongodb dotenv
 
 - Creer un fichier d'env : ```sudo nano .env ```
 
+![image](https://github.com/user-attachments/assets/28864620-30aa-4e22-9870-415575fc7a9d)
+Aller dans la ressource cosmosDB db-app3tiers et recuperer la chaine PRIMARY CONNECTION STRING pour l'adapter :
 ```env
 MONGODB_URI=mongodb://db-app3tiers:clé@db-app2tiers.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@db-app2tiers@
 DB_NAME=gamesdb # Laissez ce nom ou ajustez-le si nécessaire
 COLLECTION_NAME=games # Laissez ce nom ou ajustez-le si nécessaire
 ```
+
+Lancer l'API en mode détaché : 
+- Installer pm2 : ``` sudo npm install -g pm2 ```
+- Lancer l'API : ``` pm2 start app.js --name "my-backend-api"```
+- Verifier le status : ```pm2 status```
+- Supprimer le processus : ```pm2 delete my-backend-api```
