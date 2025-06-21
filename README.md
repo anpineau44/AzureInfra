@@ -13,5 +13,6 @@ Creation Réseau Virtuel : vnet-app3tiers, Subnet-Front : 10.0.1.0/24, Subnet-Ba
 Creation Machine Virtuel : vm-app3tiers-frontend / vm-app3tiers-backend
 
 Config :
-image - 
+
+- image 
 ![image](https://github.com/user-attachments/assets/97cc33b3-d599-4289-9102-9c2e71aca5af)
