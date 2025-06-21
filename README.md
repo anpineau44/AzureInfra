@@ -247,4 +247,17 @@ Lancer l'API en mode détaché :
 - Verifier le status : ```pm2 status```
 - Supprimer le processus : ```pm2 delete my-backend-api```
 
+![image](https://github.com/user-attachments/assets/53f4485b-43b0-49c7-9d76-0713d3b966f2)
+Configurer l'API pour se connecter a cosmosDB :
+```bash
+cd ~/my-simple-app
+npm install mongodb dotenv
+```
 
+- Creer un fichier d'env : ```sudo nano .env ```
+
+```env
+MONGODB_URI=mongodb://db-app2tiers:clé@db-app2tiers.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@db-app2tiers@
+DB_NAME=gamesdb # Laissez ce nom ou ajustez-le si nécessaire
+COLLECTION_NAME=games # Laissez ce nom ou ajustez-le si nécessaire
+```
