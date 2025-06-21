@@ -66,8 +66,9 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 - aller dans /var/www/html et creer un fichier html 
-```bash sudo nano index.html```
+```sudo nano index.html```
 
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -89,6 +90,4 @@ sudo systemctl enable nginx
     </ul>
 </body>
 <script src="script.js"></script> </html>
-
-
-'''
+```
