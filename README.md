@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', getGames);
 ```nginx
 location /api/ {
                 proxy_pass http://10.0.2.4:8080;
+                #proxy_pass http://Adresse_IP_privée_VM_Backend:Port_API;
         }
 ```
 
