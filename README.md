@@ -6,6 +6,19 @@ Creation Groupes de ressources : rg-app3tiers
 ![image](https://github.com/user-attachments/assets/e3e25cbd-dab1-48b9-964c-8fd74df2854b)
 Creation Groupe de sécurité réseau : nsg-app3tiers-backend / nsg-app3tiers-frontend
 
+Config nsg-app3tiers-backend :
+
+![image](https://github.com/user-attachments/assets/68a42816-eb22-46b0-ad5d-eeee60948f01)
+Règles de sécurité de trafic entrant :
+
+- Plages d'adresses IP/CIDR sources : 10.0.1.0/24 (Subnet-Front)
+
+- Ports de destination : 8080 pour l'API et 27017 pour MongoDB
+
+- Protocole : Any
+
+- Action : Autorisé
+
 ![image](https://github.com/user-attachments/assets/f9a20886-c269-4749-be82-9c7129705d01)
 Creation Réseau Virtuel : vnet-app3tiers, Subnet-Front : 10.0.1.0/24 associé Groupe de sécurité nsg-app3tiers-frontend, Subnet-Back : 10.0.2.0/24 associé Groupe de sécurité nsg-app3tiers-backend
 
@@ -33,7 +46,8 @@ Config :
 
 - Adresse IP publique : frontend : Nouveau, backend: Aucun
 
-- Groupe de sécurité réseau de la carte réseau : Aucun 
+- Groupe de sécurité réseau de la carte réseau : Aucun (car deja associé dans Subnet)
+
 
 
 
