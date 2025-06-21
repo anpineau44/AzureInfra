@@ -132,6 +132,12 @@ location /api/ {
         }
 ```
 
+- Tester la configuration :
+```bash
+sudo nginx -t
+sudo systemctl restart nginx
+```
+
 ![image](https://github.com/user-attachments/assets/91444d11-a8d4-4532-a43e-e5afeb3d6ba5)
 Installation :
 
@@ -141,4 +147,10 @@ Installation :
 ```bash
 sudo apt update
 sudo apt install nodejs npm -y
+mkdir ~/my-simple-app
+cd ~/my-simple-app
 ```
+
+- Créez un fichier app.js : ```bash sudo nano app.js```
+
+- 
