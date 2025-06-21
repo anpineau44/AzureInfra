@@ -58,6 +58,7 @@ Creation Azure Cosmos DB :
 ![image](https://github.com/user-attachments/assets/53bdcd61-3706-4d01-8cd2-61498a3c5e02)
 Installation :
 
+- Connexion : ssh azureadmin@ipPublic ![image](https://github.com/user-attachments/assets/727ba82e-5072-49df-a0e5-a42ecd733b31)
 - sudo apt update
 - sudo apt install nginx -y
 - sudo systemctl start nginx
