@@ -48,8 +48,25 @@ Config :
 
 - Groupe de sécurité réseau de la carte réseau : Aucun (car deja associé dans Subnet)
 
+![image](https://github.com/user-attachments/assets/d8fb26a5-8a05-4105-bc6c-b997a745aa2e)
+Creation Azure Cosmos DB : 
 
+- Type : MongoDB
 
+- Architecture : Request unit (RU) database account
 
+- Workload Type : Learning
+
+- Groupe de ressources : rg-app3tiers
+
+- Emplacement : (Europe) France Central
+
+- Mode de capacité : Serverless
+
+- Méthode de connectivité : Point de terminaison privé
+
+- Créer un point de terminaison privé : Réseau virtuel : vnet-app3tiers, Sous-réseau : Subnet-Back
+
+- Data Encryption : Service-managed key
 
 
