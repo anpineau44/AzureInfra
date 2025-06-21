@@ -65,7 +65,8 @@ sudo apt install nginx -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
-- aller dans /var/www/html et creer un fichier html : sudo nano index.html
+- aller dans /var/www/html et creer un fichier html 
+```bash sudo nano index.html```
 
 <!DOCTYPE html>
 <html lang="fr">
