@@ -22,7 +22,20 @@ Config :
 
 - Type d'authentification : Mot de passe
 
-- Ports d'entrée publics : front ![image](https://github.com/user-attachments/assets/bb19364a-9838-40de-949a-4e1ad55ed300)
+- Ports d'entrée publics : frontend : HTTP (80), HTTPS (443), SSH (22), backend : Aucun
+
+- Type de disque de système d'exploitation
+![image](https://github.com/user-attachments/assets/d43fe251-fb74-49f9-b45b-883de0e854d1)
+
+- Réseau virtuel : vnet-app3tiers
+
+- Sous-réseau : frontend : Subnet-Front, backend : Subnet-Back
+
+- Adresse IP publique : frontend : Nouveau, backend: Aucun
+
+- Groupe de sécurité réseau de la carte réseau : Aucun 
+
+
 
 
 
