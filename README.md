@@ -60,12 +60,12 @@ Installation :
 
 - Connexion : ssh azureadmin@IPpublique ![image](https://github.com/user-attachments/assets/cf8cd2d2-5095-4a7b-831b-e4b2ee383626) / Password : P@ssword12345
 ```bash
-- sudo apt update
-- sudo apt install nginx -y
-- sudo systemctl start nginx (Démarre le serveur web)
-- sudo systemctl enable nginx (Active NGINX au démarrage automatique du système)
-- aller dans /var/www/html et creer un fichier html : sudo nano index.html
+sudo apt update
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
 ```
+- aller dans /var/www/html et creer un fichier html : sudo nano index.html
 
 <!DOCTYPE html>
 <html lang="fr">
