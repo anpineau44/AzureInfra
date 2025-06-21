@@ -226,7 +226,6 @@ app.listen(port, () => {
 });
 ```
 
-
 Verifier version Node.js : ```bash node -v``` (si inferieur a v14.x.x) :
 - Install NVM : ```bash curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash ``` (fermer la session SSH et se reconnecter apres)
 
@@ -236,7 +235,10 @@ nvm install --lts
 nvm use --lts
 ```
 
+```bash
 cd ~/my-simple-app
 rm -rf node_modules package-lock.json # Remove existing modules and lock file
 npm install
+```
+
 
