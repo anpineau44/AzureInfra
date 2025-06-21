@@ -12,11 +12,8 @@ Config nsg-app3tiers-backend :
 Règles de sécurité de trafic entrant :
 
 - Plages d'adresses IP/CIDR sources : 10.0.1.0/24 (Subnet-Front)
-
 - Ports de destination : 8080 pour l'API et 27017 pour MongoDB ou * pour tout
-
 - Protocole : Any
-
 - Action : Autorisé
 
 ![image](https://github.com/user-attachments/assets/f9a20886-c269-4749-be82-9c7129705d01)
@@ -34,47 +31,32 @@ Config :
 ![image](https://github.com/user-attachments/assets/85001564-bcfc-475d-9f7d-257a4b87756e)
 
 - Type d'authentification : Mot de passe
-
 - Nom d’utilisateur : azureadmin
-
 - Mot de passe : P@ssword12345
-
 - Ports d'entrée publics : frontend : HTTP (80), HTTPS (443), SSH (22), backend : Aucun
-
 - Type de disque de système d'exploitation
 ![image](https://github.com/user-attachments/assets/d43fe251-fb74-49f9-b45b-883de0e854d1)
 
 - Réseau virtuel : vnet-app3tiers
-
 - Sous-réseau : frontend : Subnet-Front, backend : Subnet-Back
-
 - Adresse IP publique : frontend : Nouveau, backend: Aucun
-
 - Groupe de sécurité réseau de la carte réseau : Aucun (car deja associé dans Subnet)
 
 ![image](https://github.com/user-attachments/assets/d8fb26a5-8a05-4105-bc6c-b997a745aa2e)
 Creation Azure Cosmos DB : 
 
 - Type : MongoDB
-
 - Architecture : Request unit (RU) database account
-
 - Workload Type : Learning
-
 - Groupe de ressources : rg-app3tiers
-
 - Emplacement : (Europe) France Central
-
 - Mode de capacité : Serverless
-
 - Méthode de connectivité : Point de terminaison privé
-
 - Créer un point de terminaison privé : Réseau virtuel : vnet-app3tiers, Sous-réseau : Subnet-Back
-
 - Data Encryption : Service-managed key
 
 ![image](https://github.com/user-attachments/assets/53bdcd61-3706-4d01-8cd2-61498a3c5e02)
-Installation vm-app3tiers-frontend :
+Installation :
 
 - sudo apt update
 - sudo apt install nginx -y
