@@ -151,6 +151,82 @@ mkdir ~/my-simple-app
 cd ~/my-simple-app
 ```
 
+- Créez un fichier app.js : ```bash sudo nano app.js```
+
+```javascript
+const express = require('express');
+const { MongoClient } = require('mongodb');
+require('dotenv').config();
+
+const app = express();
+const port = 8080;
+
+// Récupérer les variables d'environnement
+const uri = process.env.MONGODB_URI;
+// Plus besoin de username et password séparés si l'URI est complète
+const dbName = process.env.DB_NAME;
+const collectionName = process.env.COLLECTION_NAME;
+
+let db; // Variable pour stocker la connexion à la base de données
+
+async function connectToDatabase() {
+    try {
+        // L'URI contient déjà les identifiants
+        const client = new MongoClient(uri); // Plus besoin de l'objet { auth: ... } ici
+        await client.connect();
+        db = client.db(dbName);
+        console.log("Connecté à la base de données Cosmos DB (MongoDB) !");
+
+        // Optionnel: Insérer des données initiales si la collection est vide
+        const collection = db.collection(collectionName);
+        const count = await collection.countDocuments({});
+        if (count === 0) {
+            console.log("Collection vide, insertion de données initiales...");
+            await collection.insertMany([
+                { id: 1, name: "The Witcher 3: Wild Hunt" },
+                { id: 2, name: "Cyberpunk 2077" },
+                { id: 3, name: "Red Dead Redemption 2" },
+                { id: 4, name: "Elden Ring" },
+                { id: 5, name: "Baldur's Gate 3" }
+            ]);
+            console.log("Données initiales insérées.");
+        }
+
+    } catch (err) {
+        console.error("Erreur de connexion à la base de données :", err);
+        // Il est important de bien gérer cette erreur.
+        // Si la base de données n'est pas connectée, l'API ne fonctionnera pas.
+        process.exit(1); // Arrêter l'application si la connexion échoue
+    }
+}
+
+// Connectez-vous à la base de données au démarrage de l'application
+connectToDatabase();
+
+// Middleware pour analyser le JSON (important pour les requêtes POST/PUT)
+app.use(express.json());
+
+// Route API pour récupérer tous les jeux
+app.get('/api/games', async (req, res) => {
+    if (!db) {
+        return res.status(503).send("Service non disponible : base de données non connectée.");
+    }
+    try {
+        const games = await db.collection(collectionName).find({}).toArray();
+        res.json(games);
+    } catch (err) {
+        console.error("Erreur lors de la récupération des jeux :", err);
+        res.status(500).send("Erreur serveur lors de la récupération des jeux.");
+    }
+});
+
+// Lancez le serveur
+app.listen(port, () => {
+    console.log(`API backend lancée sur le port ${port}`);
+});
+```
+
+
 Verifier version Node.js : ```bash node -v``` (si inferieur a v14.x.x) :
 - Install NVM : ```bash curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash ``` (fermer la session SSH et se reconnecter apres)
 
@@ -160,7 +236,7 @@ nvm install --lts
 nvm use --lts
 ```
 
-- Créez un fichier app.js : ```bash sudo nano app.js```
-
-
+cd ~/my-simple-app
+rm -rf node_modules package-lock.json # Remove existing modules and lock file
+npm install
 
