@@ -20,3 +20,9 @@ Config :
 - taille
 ![image](https://github.com/user-attachments/assets/85001564-bcfc-475d-9f7d-257a4b87756e)
 
+- Type d'authentification : Mot de passe
+
+- Ports d'entrée publics : front ![image](https://github.com/user-attachments/assets/bb19364a-9838-40de-949a-4e1ad55ed300)
+
+
+
