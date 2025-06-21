@@ -135,7 +135,7 @@ location /api/ {
 ![image](https://github.com/user-attachments/assets/91444d11-a8d4-4532-a43e-e5afeb3d6ba5)
 Installation :
 
-- Se Connecter dabord a vm-app3tiers-frontend puis : ``` ssh azureadmin@IPprivéVMbackend ``` ![image](https://github.com/user-attachments/assets/7d7401dd-dd09-4019-b23a-8723f7f4fb32)
+- Se Connecter dabord a vm-app3tiers-frontend pour se connecter a vm-app3tiers-backend : ``` ssh azureadmin@IPprivéVMbackend ``` ![image](https://github.com/user-attachments/assets/7d7401dd-dd09-4019-b23a-8723f7f4fb32)
  / Password : P@ssword12345
 
 ```bash
