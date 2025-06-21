@@ -90,3 +90,35 @@ sudo systemctl enable nginx
 </body>
 <script src="script.js"></script> </html>
 ```
+
+Creer un fichier script.js : ```sudo nano script.js```
+
+```javascript
+async function getGames() {
+    try {
+        const response = await fetch(`/api/games`); // Remplacez /api/games par votre endpoint réel
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP ! Statut: ${response.status}`);
+        }
+        const games = await response.json();
+        displayGames(games); // Fonction pour afficher les jeux sur la page
+    } catch (error) {
+        console.error('Erreur lors de la récupération des jeux:', error);
+        document.getElementById('games-list').innerHTML = '<li>Impossible de charger les jeux pour le moment.</li>';
+    }
+}
+
+function displayGames(games) {
+    const ul = document.getElementById('games-list');
+    ul.innerHTML = ''; // Nettoyer la liste existante
+    games.forEach(game => {
+        const li = document.createElement('li');
+        li.textContent = game.name || game.title; // Assurez-vous que la propriété est correcte (name ou title)
+        ul.appendChild(li);
+    });
+}
+
+// Appeler la fonction au chargement de la page
+document.addEventListener('DOMContentLoaded', getGames);
+```
+
